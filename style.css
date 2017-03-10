@@ -1,0 +1,691 @@
+/*
+Theme Name: WordPress Theme Building from HTML - Part 3
+Theme URI: http://davenorm.me
+Author: David Norminton 
+Author URI: http://davenorm.me
+Description: The theme to accompany the wptutsplus series on creating a WordPress theme from static HTML. This theme accompanies Part 3 of the series.
+Version: 3.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+body {
+    margin :0; padding : 0; background:#f1efef;font-family: 'Montserrat', sans-serif;
+
+}
+*:focus {
+    outline: none;
+}
+@media only screen and (min-width : 980px) {
+    #header-desktop {
+        display : block;
+    }
+    #header-mobile {
+        display : none;
+    }
+}
+@media only screen and (max-width : 979px) {
+    #header-mobile {
+        display : block;
+    }
+    #header-desktop {
+        display : none;
+    }
+}
+@media only screen and (min-width : 980px) {
+    header {
+        width: 100%;
+        height: 134px;
+        margin: 0 auto;
+        background: #2A3A3F;
+        -webkit-box-shadow: 0 4px 6px 2px #2d2d26;
+        -moz-box-shadow:0 4px 6px 2px #2d2d26;
+        box-shadow: 0 4px 6px 2px #2d2d26;
+    }
+}
+@media only screen and (max-width: 451px) {
+    header {
+        width: 100%;
+        height: 110px;
+        background: #2A3A3F;
+        -webkit-box-shadow: 0 4px 6px 2px #2d2d26;
+        -moz-box-shadow:0 4px 6px 2px #2d2d26;
+        box-shadow: 0 4px 6px 2px #2d2d26;
+    }
+}
+@media only screen and (min-width: 451px) and (max-width : 979px) {
+    header {
+        width: 100%;
+        height: 120px;
+        background: #2A3A3F;
+        -webkit-box-shadow: 0 4px 6px 2px #2d2d26;
+        -moz-box-shadow:0 4px 6px 2px #2d2d26;
+        box-shadow: 0 4px 6px 2px #2d2d26;
+    }
+}
+
+a {
+    cursor : pointer;
+    color : #337ab7;
+    text-decoration : none;
+}
+#logo a {
+    color : white;
+    text-decoration : none;
+}
+@media only screen and (min-width : 980px) {
+    #logo {
+        font-family: 'Satisfy', cursive;
+        font-size: 20px;
+        color: white;
+        width: 65%;
+        margin: 0 auto;
+        padding-top: 34px;
+    }
+}
+@media only screen and (max-width : 450px) {
+    #logo {
+        font-family: 'Satisfy', cursive;
+        font-size: 16px;
+        color: white;
+        width: 50%;
+        padding: 22px 18px;
+        float : left;
+    }
+}
+@media only screen and (min-width: 451px) and (max-width : 979px) {
+    #logo {
+        font-family: 'Satisfy', cursive;
+        font-size: 20px;
+        color: white;
+        width: 50%;
+        padding: 14px 20px;
+        float : left;
+    }
+}
+.displayNone {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s ease-out;
+}
+.displayBlock {
+
+    transition: visibility 0s, opacity 0.5s ease-in;
+    visibility: visible;
+    opacity: 1;
+}
+#mobile-menu-button {
+    float: right;
+    margin: 26px;
+    background: transparent;
+    border: 0;
+}
+#logo h1 {
+    margin: 0;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px #ec1308;
+}
+#logo i {
+    font-family: -webkit-body;
+    letter-spacing: 2px;
+    text-shadow : 2px 2px #131212;
+}
+#call {
+    margin: -51px 0 27px 0;
+    font-size: 29px;
+    padding: 10px 0 5px 0;
+    text-align: right;
+}
+.color-bar {
+    border: 0;
+    height: 1px !important;
+    background: #768493;
+    border-radius: 10px !important;
+    width: 30px !important;
+    display: block;
+    padding: 4px;
+    margin: 4px;
+    top: 10px;
+    transition: all 1s;
+}
+.color-bar: hover {
+    background : #fff;
+}
+.bar1 {
+    transform: rotate(45deg);
+    position: relative;
+    top: 13px;
+    transition: all 1s;
+}
+.bar2 {
+    display : none;
+    transition: all 1s;
+}
+.bar3 {
+    transform: rotate(319deg);
+    transition: all 1s;
+}
+@media only screen and (min-width : 980px) {
+    .mobile-menu {
+        position: absolute;
+        top: 90px;
+        width: 90%;
+        height: 100%;
+        background: #2a3a3f;
+        border-top: 1px solid black;
+        padding : 0;
+    }
+}
+@media only screen and (max-width : 979px) {
+    .mobile-menu {
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    margin: 0;
+    height: 100%;
+    background: #2a3a3f;
+    padding: 0;
+    }
+}
+.mobile-menu li {
+    list-style: none;
+    text-align: left;
+    background: #7891ad;
+    margin: 20px 10%;
+    border-radius: 7px;
+    border: 2px solid black;
+}
+.mobile-menu li:hover {
+    background : black;
+    transition: background-color 0.5s ease;
+}
+.mobile-menu-item, .mobile-number-header{
+    padding: 5px 10px;
+    font-family: serif;
+    color: #dcdada;
+    font-size : 18px;
+}
+#number-header {
+    padding: 0;
+    position: relative;
+    bottom: 6px;
+    right: 11px;
+}
+#navCont {
+   float: right;
+    margin-top: -26px;
+    padding: 5px 10px;
+    font-family: serif
+}
+.menu-item {
+    float: left;
+    margin-top: -12px;
+    padding: 5px 10px;
+    font-family: serif;
+    color: #eae4e4;
+    background: #b93636;
+    margin-left: 5px;
+    border-radius: 7px;
+}
+.menu-item:hover {
+    background :#7b2323 ;
+}
+#top-back {
+    height: 45px;
+    width: 100%;
+    background: rgba(64, 57, 57, 0.92);
+}
+@media only screen and (max-width : 979px) {
+    .main {
+        width: 83%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (min-width : 980px) {
+    .main {
+        width: 65%;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width : 979px) {
+    #hero-image {
+
+    }
+}
+
+@media only screen and (min-width : 980px) {
+    #hero-image {
+        background: url(/assets/images/road_dusk.jpg) no-repeat;
+        background-size: 100%;
+        background-position: center;
+        text-align : center;
+        z-index : -1;
+     }
+}
+@media only screen and (max-width : 979px) {
+    #hero-image {
+        background: url(/assets//images/road_dusk_narrow.jpg) no-repeat;
+        background-position : center bottom;
+        text-align : center;
+        z-index : -1;
+     }
+}
+@media only screen and (max-width: 451px) {
+    .speel-text {
+        font-size : 20px;
+     }
+    #speel {
+        width : 80%;
+        margin : 0 auto;
+    }
+}
+@media only screen and (min-width: 451px) and (max-width : 979px) {
+    #speel { 
+        margin-top: 10px;
+        width : 65%;
+        margin : 0 auto;
+    }
+    .speel-text {
+        font-size : 26px;
+    }
+}
+@media only screen and (min-width : 980px) {
+    .speel-text {
+        font-size : 39px;
+    }
+    #speel {
+        width : 65%;
+        margin : 0 auto;
+    }
+}
+
+.speel-text {
+    color : #fff;
+    text-shadow: 2px 2px #3a3333;
+    font-family: initial;
+}
+
+#about {
+    padding: 40px 15px;
+    background : #4b78ab;
+}
+#about p {
+    font-size: 20px;
+    text-align: left;
+}
+#experience {
+    margin-top: 55px;
+    padding-bottom: 50px;
+    overflow: hidden;   
+}
+#experience-list {
+    padding : 0;
+    margin : 0;
+}
+@media only screen and (min-width : 980px) {
+    #experience-list li {
+        list-style : none;
+        width : 31%;
+        float : left;
+        font-size : 22px;
+        text-align: center;
+    }
+    .add-sides {
+        margin : 0 20px
+    }
+}
+@media only screen and (max-width : 979px) {
+    #experience-list li {
+        list-style : none;
+        width : 100%;
+        font-size : 22px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+}
+#experience-list span {
+    font-size : 35px;
+}
+.red {
+    color : #ff0000;
+}
+.green {
+    color : #08b308 ;
+}
+.blue {   
+    text-align: center;
+    color : #3131a5;
+}
+#experience li p {
+    margin-top : 20px;
+    line-height: 1.4;
+    font-size: 16px;
+    color: #655959;
+    text-align : left;
+}
+#pricing {
+    clear : both;
+    background : #fff;
+    overflow : hidden;
+    padding: 40px 0;
+}
+@media only screen and (min-width : 980px){
+    .price-box {
+        margin: 0 2%;
+        width: 46%;
+        background: #f7f7f7;
+        float: left;
+        text-align: center;
+        font-family: sans-serif;
+    }
+}
+
+@media only screen and ( max-width : 979px){
+    .price-box {
+        background: #f7f7f7;
+        text-align: center;
+        font-family: sans-serif;
+    }
+}
+.price-box h3 {
+        border-bottom: 4px solid #231f1f;
+        background: #202029;
+        padding: 10px;
+        font-weight: bold;
+        color: white;
+        margin : 0;
+}
+.price-covers {
+    text-align: left;
+    padding: 30px 12px;
+    font-size: 16px;
+    list-style: none;
+    font-family: inherit;
+}
+.price-arrow {
+    color : green;
+    padding-right : 5px;
+}
+#reviews {
+    padding: 58px 0;
+    clear: both;
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+}
+#reviews p {
+    text-align : left;
+    margin-top : 20px;
+}
+footer {
+    background: #2A3A3F;
+    overflow : hidden;
+    padding-bottom : 20px;
+}
+
+@media only screen and (min-width : 980px) {
+    #areas {
+        width : 65%;
+        margin : 0 auto;
+        padding: 30px;
+        overflow : hidden;
+    }
+    #map-area {
+        width : 50%;
+        cursor : pointer;
+        float : left;
+        padding : 30px;
+    }
+}
+@media only screen and (max-width : 979px) {
+    #areas {
+        margin : 0 auto;
+        padding: 20px 10px;
+        overflow : hidden;
+    }
+    #map-area {
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    }
+}
+.title-box {
+    background: #fff;
+    text-align: center;
+    display: block;
+    padding: 5px 0;
+    font-weight: bold;
+}
+@media only screen and (max-width : 979px) {
+    #contact {
+        padding: 26px ;
+        color: #fff;
+        line-height: 30px;
+        font-size: 18px;
+        display : block;
+    }
+}
+@media only screen and (min-width : 980px) {
+    #contact {
+        float: right;
+        width: 35%;
+        padding: 30px 0 0 0px;
+        color: #fff;
+        line-height: 22px;
+    }
+}
+.contact-title {
+    color: #fff;
+    border-bottom: 1px solid #34515a;
+    margin: 0 0 30px 0;
+}
+.space {
+    margin-right : 10px;
+}
+#social {
+    clear: both;
+    text-align: center;
+}
+#social a {
+    margin: 0 8px 0 0px;
+    color: #6383a0;
+    font-size: 28px !important;
+    transition: 1s;
+    cursor: pointer;
+    border-radius: 50px;
+    background: #222e39;
+    padding : 11px 15px 11px 20px
+}
+#social a:hover {
+
+}
+.divider {
+    border-bottom: 1px solid #0c2f3a;
+    margin: 1px 0;
+}
+#by {
+    text-align : center;
+    padding : 10px 0;
+    cursor : pointer;
+}
+#by a {
+    color : white;
+}
+#courses-container {
+    text-align : center;
+}
+.gray-back {
+    padding : 40px 0;
+    width : 100%;
+    background : #f1efef;
+    text-align : left;
+}
+.white-back {
+    padding : 40px 0;
+    width : 100%;
+    background : white;
+    text-align : left;
+}
+.white-back p, .gray-back p {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: gray;
+}
+.gray-back h3, .white-back h3 {
+    margin : 0 0 50px 0;
+    color : #808080;
+}
+#pass-plus-img {
+    margin-top: -24px;
+}
+.pass-plus-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+@media only screen and ( min-width : 980px) {
+    .page-title {
+        font-size: 50px;
+        color: black;
+        font-family: 'Patua One', cursive;
+    }
+}
+@media only screen and ( max-width : 979px) {
+    .page-title {
+        font-size: 30px;
+        color: black;
+        font-family: 'Patua One', cursive;
+    }
+}
+.chevron {
+    color : green;
+    margin-right: 10px;
+}
+@media only screen and (min-width : 980px) {
+    .sub-heading {
+        margin: 50px;
+        text-align: center;
+        font-size: 27px;
+        font-weight: bold;
+        text-decoration: underline;
+        letter-spacing: 1px;
+    }
+    .question {
+        background : white;
+        width : 74%; 
+        float : left;
+        padding: 18px 0 4px 0;
+    }
+    .answer {
+        background: #e5eae9;
+        clear: both;
+        padding: 10px 10%;
+        position: relative;
+        top: 18px;
+        display : none;
+    }
+    .answer , .question {
+        font-size : 18px;
+    }
+    .question-number {
+        color: #5a5c9a;
+        float: left;
+        padding: 30px 15px;
+        width : 10%;
+    }
+    .q-a {
+        margin-top: 10px;
+        color: black;
+        font-size: 30px;
+        background: white;
+        clear: both;
+        overflow: hidden;
+    }
+    .chevron-down {
+        float : right;
+        width : 10%;
+        text-align: center;
+        padding-top: 16px;
+        transform : rotate(0deg);
+        cursor : pointer;
+    }
+    .chevron-up {
+        float : right;
+        width : 10%;
+        text-align: center;
+        padding-top: 16px;
+        transform : rotate(180deg);
+        position : relative;
+        top : 20px;
+        cursor : pointer;
+    }
+    #video {
+        text-align : center;
+        margin : 60px 0;
+    }
+}
+@media only screen and (max-width : 979px) {
+    .sub-heading {
+        margin: 50px;
+        text-align: center;
+        font-size: 27px;
+        font-weight: bold;
+        text-decoration: underline;
+        letter-spacing: 1px;
+    }
+    .question {
+        background : white;
+        width : 100%; 
+        padding: 10px 20px;
+        text-align : left;
+        display : block;  
+    }
+    .answer {
+        background: #e5eae9;
+        padding: 10px 10%;
+        position: relative;
+        top: 18px;
+        display : none;
+        padding: 10px 20px;
+    }
+    .answer , .question {
+        font-size : 18px;
+    }
+    .question-number {
+        background: black;
+        color: white;
+        padding: 10px 15px;
+        width : 100%;
+        text-align: center;
+        display: block;
+    }
+    .q-a {
+        margin-top: 10px;
+        color: black;
+        font-size: 24px;
+        background: white;
+        overflow: hidden;
+    }
+    .chevron-down {
+        width : 100%;
+        text-align: center;
+        padding-top: 16px;
+        transform : rotate(0deg);
+        cursor : pointer;
+    }
+    .chevron-up {
+        width : 100%;
+        text-align: center;
+        padding-top: 16px;
+        transform : rotate(180deg);
+        position : relative;
+        top : 20px;
+        cursor : pointer;
+    }
+    #video {
+        text-align: center;
+        margin : 60px 0;
+    }
+}
+
